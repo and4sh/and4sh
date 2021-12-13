@@ -1,0 +1,54 @@
+<h2>interpolacja - przyklad</h2>
+{{title}}<br>
+{{getTextFromFunction()}}<br>
+{{sampleObj.txt}}<br>
+{{textFromPropert}}<br>
+{{getAnonymusObject().txt1 + ' ' + getAnonymusObject().txt2}}<br>
+{{ shortIf ? 'true' : 'else' }}<br>
+
+<br>
+<h2>hange detection - przyklad</h2>
+kliknięć : {{changeCounter}}<br>
+<button (click)="changeDetectionSample()">change detection test</button>
+
+<h2>Pipe - przyklad</h2>
+{{pipeSample | uppercase}}<br>
+{{ currDate() | date:'dd-MM-yyyy'}}
+
+<h2>questionMark - przyklad</h2>
+<button (click)="questionMarkMakeTest()">questionMark test</button>
+{{classTest.a}} <br>
+<span *ngIf = "classTest && classTest.a"{{classTest.a}}></span>
+
+<h2>ngFor - przyklad</h2>
+<ul>
+  <li *ngFor="let tmp of ngForTest | keyvalue; let first = first; let last = last; let i = index">
+
+    {{i + 1}} {{tmp.key}} - {{tmp.value}}
+    <span *ngIf="first"> poczatek </span>
+    <span *ngIf="last"> koniec </span>
+
+  </li>
+</ul>
+
+<h2>events i rzutowanie - przyklad</h2>
+<input type="text" placeholder="event test" (keyup)="onKeyUp($event)"
+#znacznik
+>
+<h2>template reference - przyklad</h2>
+<button (click)="logOnConsole(znacznik.value)">tekst z input </button>
+
+<h2>property binding - przyklad</h2>
+<button [disabled] = "propertBindBool" (click)="logOnConsole(znacznik.value)">tekst z input </button>
+
+<h2>2way binding - przyklad</h2>
+<input placeholder="2way binding sample" type="text" [(ngModel)] = "wayBind" />
+
+<h2>ngif else ng switch - przyklad</h2>
+
+<p *ngIf="dzis === 6; else opcjaElse">
+dzien 6xxxxxxxxxxxxxxxxxxx
+</p>
+<ng-template #opcjaElse>
+  <p>inny dzien xxxxxxxxxxxxxxyxxxxxxx</p>
+</ng-template>
