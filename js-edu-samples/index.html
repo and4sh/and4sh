@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //deklaracja
+        var zmiennaFunkcyjna = "zasięg funkcyjny";
+        let stringVar = "aaaaa";
+        let intVar = 5;
+        let boolVar = true;
+        let decimalVar = 5.2;
+        let templateLiteralsTextBacktik = ` linia1
+                            linia2
+                            linia 3`;
+        let tab = [1, "aaaa", 3];
+
+        switch(intVar)
+        {
+            case 1: console.log("jest 1"); break;
+            case 5: console.log("switch jest 5"); break;
+            default: console.log("non");
+        }
+
+        console.log("pętle");
+        let i = 0;
+        while (i<3)
+        {
+            console.log("while", i++);
+            
+        }
+        i = 0;
+        do {
+            console.log("do while", i++);            
+        }while (i<3)
+        for (i = 0; i < 3; i++)
+        {
+            console.log("for", i);
+        }
+        console.log("funkcje");
+        function fun1(a,b)
+        {            
+            return a + b;
+        }
+        console.log(fun1(1,2));
+                    
+    </script>
+</body>
+</html>
